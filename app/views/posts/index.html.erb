@@ -1,0 +1,7 @@
+ <% @posts.each do |post| %>
+    <% if user_signed_in? %> 
+        <p><%= link_to "#{post.author} #{post.title} #{post.created_at}", posts_path %> </p>
+    <% else %>
+        <p><%= link_to " secret ID #{post.title} #{post.created_at}", posts_path %> </p>
+    <% end%> 
+<% end %>

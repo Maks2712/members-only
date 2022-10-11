@@ -1,0 +1,19 @@
+<%= form_with(model: @post, local:true) do |form|%>
+
+<p>
+  <%= form.label :title, "Post title"%>
+  <%= form.text_field :title, :placeholder=>'Some words' %>
+</p>
+<p>
+  <%= form.label :body, "Post text"%>
+  <%= form.text_area :body, rows:5, :placeholder=> 'Some text' %>
+</p>
+<p>
+  <%= form.submit "Create post"%>
+</p>
+<% end %>
+
+
+
+
+
